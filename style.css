@@ -1,0 +1,384 @@
+/* Fonts */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  width: 100%;
+  box-shadow: 2px 3px 5px grey;
+  padding: 20px;
+  flex-direction: row;
+  background-color: #fafafa;
+  /* position: fixed; */
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-list .logo {
+  font-size: 40px;
+}
+
+.nav-list a {
+  margin-right: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.3s ease-in-out;
+  font-family: "Exo 2";
+}
+.nav-list a:hover {
+  color: #0056b3;
+  font-size: 22px;
+  transition: 0.3s ease-in-out;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.rightnav {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+/* .rightnav input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+} */
+.rightnav input {
+  height: 80%;
+  width: 200px;
+  /* border: 1px solid black; */
+  background-color: #f2f2f2;
+  border: 1px solid black;
+  border-radius: 20px 0px 0px 20px;
+  padding-left: 20px;
+}
+
+.rightnav input:focus {
+  border: none;
+}
+
+.rightnav .btn {
+  /* padding: 5px 10px; */
+  border: none;
+  width: 80px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 0px 20px 20px 0px;
+  cursor: pointer;
+  height: 80%;
+  border: 1px solid black;
+  border-left: none;
+}
+
+.rightnav .btn:hover {
+  background-color: #0056b3;
+}
+
+/* CSS for About Us section */
+#about {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about .container h3 {
+  font-size: 20px;
+  font-family: "Exo 2";
+  margin-top: 20px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container h2 {
+  color: #333;
+  font-size: 2em;
+  font-family: "Exo 2";
+}
+
+.container p {
+  color: #666;
+  font-size: 1.2em;
+  /* display: flex;
+    align-self: center;
+    justify-self: center; */
+}
+
+/* CSS for Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+th {
+  background-color: #ddd;
+}
+
+/* Highlight the first column (Name) */
+td:first-child {
+  font-weight: bold;
+}
+
+/* Hover effect on table rows */
+tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* CSS for Services section */
+#services {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container h2 {
+  color: #333;
+  font-size: 2em;
+}
+
+.container p {
+  color: #666;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* CSS for Service List */
+.service-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  justify-content: space-evenly;
+}
+.service-list .courses {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* visibility: hidden;
+  overflow: hidden; */
+}
+
+.service-list li {
+  /* height:100px; */
+  background: #fff;
+  border-radius: 20px;
+  border: 5px solid #fff;
+  overflow: hidden;
+  /* color: var(--color-text); */
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/*Card design*/
+.card-wrap {
+  width: 250px;
+  background: #fff;
+  border-radius: 20px;
+  border: 5px solid #fff;
+  overflow: hidden;
+  color: var(--color-text);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-right: 25px;
+}
+.card-wrap:hover {
+  transform: scale(1.1);
+}
+.card-header {
+  height: 240px;
+  width: 100%;
+  background: red;
+  border-radius: 100% 0% 100% 0% / 0% 50% 50% 100%;
+  display: grid;
+  place-items: center;
+}
+
+.card-header i {
+  color: #fff;
+  font-size: 72px;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+}
+.card-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.card-text {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.card-btn {
+  border: none;
+  border-radius: 100px;
+  padding: 5px 30px;
+  color: #fff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.card-header.one{
+    background: linear-gradient(to bottom left, var(--card1-gradient-color1), var(--card1-gradient-color2));
+  }
+  .card-header.two{
+    background: linear-gradient(to bottom left, var(--card2-gradient-color1), var(--card2-gradient-color2));
+  }
+  .card-header.three{
+    background: linear-gradient(to bottom left, var(--card3-gradient-color1), var(--card3-gradient-color2));
+  }
+  .card-header.four{
+    background: linear-gradient(to bottom left, var(--card4-gradient-color1), var(--card4-gradient-color2));
+  }
+
+.service-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-list ul li {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-list ul li:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* CSS for Contact form */
+
+#contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact .container {
+  background-color: #ebdef0;
+  width: 30%;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 40px 0px 40px 0px;
+  box-shadow: 0px 3px 10px black;
+  /* display: flex;
+    align-items: center;
+    flex-direction: column; */
+}
+
+#contact .container .form-group input {
+  border-radius: 15px;
+  font-size: 15px;
+}
+#contact .container p {
+  width: 60%;
+  position: relative;
+  left: 20%;
+}
+
+#contact .container .btn-primary {
+  margin-top: 15px;
+  width: 50%;
+  background: linear-gradient(to bottom right, #039fdb, #77e1d2);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
