@@ -8,7 +8,7 @@
 .navbar {
   display: flex;
   width: 100%;
-  box-shadow: 2px 3px 5px grey;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
   padding: 20px;
   flex-direction: row;
   background-color: #fafafa;
@@ -38,10 +38,10 @@ header {
   font-size: 20px;
   transition: 0.3s ease-in-out;
   font-family: "Exo 2";
+  color: #0f0f0f;
 }
 .nav-list a:hover {
   color: #0056b3;
-  font-size: 22px;
   transition: 0.3s ease-in-out;
 }
 
@@ -57,12 +57,6 @@ header {
   border-radius: 20px;
   padding: 5px;
 }
-
-/* .rightnav input[type="text"] {
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-} */
 .rightnav input {
   height: 80%;
   width: 200px;
@@ -188,158 +182,171 @@ tbody tr:hover {
   display: flex;
   flex-direction: column;
   list-style: none;
+
   justify-content: space-evenly;
-}
-.service-list .courses {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-evenly;
-  /* visibility: hidden;
-  overflow: hidden; */
 }
 
-.service-list li {
-  /* height:100px; */
+.service-list .service-list-item {
   background: #fff;
   border-radius: 20px;
   border: 5px solid #fff;
   overflow: hidden;
-  /* color: var(--color-text); */
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   margin-bottom: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
   padding: 10px;
+  list-style: none;
+  border: 1px solid #d3d3d3;
 }
 
-/*Card design*/
-.card-wrap {
-  width: 250px;
-  background: #fff;
-  border-radius: 20px;
-  border: 5px solid #fff;
-  overflow: hidden;
-  color: var(--color-text);
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  margin-right: 25px;
-}
-.card-wrap:hover {
-  transform: scale(1.1);
-}
-.card-header {
-  height: 240px;
-  width: 100%;
-  background: red;
-  border-radius: 100% 0% 100% 0% / 0% 50% 50% 100%;
-  display: grid;
-  place-items: center;
+/* .service-list .service-list-item:hover {
+  background-color: #d3d3d3;
+} */
+
+.service-list h3 {
+  letter-spacing: 2px;
 }
 
-.card-header i {
-  color: #fff;
-  font-size: 72px;
+.service-list input {
+  display: none;
 }
-.card-content {
+
+/* .service-list input:checked ~ .service-list-item {
+  height: 400px;
+} */
+
+.service-list .courses img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+.courses-div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
-  margin: 0 auto;
-}
-.card-title {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 16px;
-  margin-top: 10px;
+  width: 200px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
   margin-bottom: 20px;
-}
-.card-text {
-  text-align: center;
-  font-size: 12px;
-  margin-bottom: 20px;
-}
-.card-btn {
-  border: none;
-  border-radius: 100px;
-  padding: 5px 30px;
-  color: #fff;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-.card-header.one{
-    background: linear-gradient(to bottom left, var(--card1-gradient-color1), var(--card1-gradient-color2));
-  }
-  .card-header.two{
-    background: linear-gradient(to bottom left, var(--card2-gradient-color1), var(--card2-gradient-color2));
-  }
-  .card-header.three{
-    background: linear-gradient(to bottom left, var(--card3-gradient-color1), var(--card3-gradient-color2));
-  }
-  .card-header.four{
-    background: linear-gradient(to bottom left, var(--card4-gradient-color1), var(--card4-gradient-color2));
-  }
-
-.service-list ul {
-  list-style: none;
-  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  transform: translate(1);
+  border: 1px dotted black;
 }
 
-.service-list ul li {
-  background-color: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.courses-div:hover {
+  transform: rotate(5deg);
 }
 
-.service-list ul li:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
-}
-
-/* CSS for Contact form */
-
-#contact {
+.courses-div .icon {
+  height: 180px;
+  background-color: orange;
+  width: fit-content;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 10px 10px 50% 0px;
 }
-#contact .container {
-  background-color: #ebdef0;
-  width: 30%;
-  margin: 30px;
-  padding: 20px;
-  border-radius: 40px 0px 40px 0px;
-  box-shadow: 0px 3px 10px black;
-  /* display: flex;
-    align-items: center;
-    flex-direction: column; */
+.service-list .courses {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-#contact .container .form-group input {
-  border-radius: 15px;
-  font-size: 15px;
+.service-list input:checked .courses {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
 }
-#contact .container p {
+/* CSS for Contact form */
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #2d2d30;
+  padding: 30px;
+  flex-direction: row;
+  color: #ddd;
+}
+#footer .container {
+  height: fit-content;
+  padding: 30px 0px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 50%;
+  color: #d3d3d3;
+}
+#footer form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#footer .text-container {
+  display: flex;
+  flex-direction: row;
+
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+}
+#footer .text-container .text {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 30px;
+}
+#footer .text-container .text h4 {
+  font-size: 25px;
+  font-family: "Exo 2";
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+#footer .text-container .text p {
+  font-family: "Exo 2";
+  font-size: 18px;
+  text-align: center;
+}
+
+#footer .container .form-group input {
+  border-radius: 5px;
+  font-size: 15px;
+  width: 80%;
+}
+/* #footer .container p {
   width: 60%;
   position: relative;
   left: 20%;
-}
+} */
 
-#contact .container .btn-primary {
+#footer .container .btn-primary {
   margin-top: 15px;
-  width: 50%;
+  width: 70%;
+  max-width: 350px;
   background: linear-gradient(to bottom right, #039fdb, #77e1d2);
+  color: #0f0f0f;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
 }
 
-.contact-form form {
+#footer .container h2 {
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.footer-form form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -354,6 +361,13 @@ tbody tr:hover {
 .form-group label {
   display: block;
   margin-bottom: 5px;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: 700;
+  width: 80%;
+  text-align: left;
+  position: relative;
+  left: 40px;
 }
 
 .form-group input,
@@ -367,6 +381,7 @@ tbody tr:hover {
 
 .form-group textarea {
   resize: vertical;
+  width: 80%;
 }
 
 .btn-primary {
