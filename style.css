@@ -11,13 +11,15 @@
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
   padding: 20px;
   flex-direction: row;
-  background-color: #fafafa;
+  background-color: gray;
   /* position: fixed; */
 }
 header {
   display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  padding: 300px 20px;
 }
 .nav-list {
   list-style: none;
@@ -88,6 +90,19 @@ header {
   background-color: #0056b3;
 }
 
+.welcome {
+  background-image: url("bg-picture.jpg");
+  background-size: 100%;
+
+  background-repeat: no-repeat;
+}
+
+.welcome-text {
+  align-content: center;  
+  color: black;
+  font-size: xx-large;
+}
+
 /* CSS for About Us section */
 #about {
   background-color: #f9f9f9;
@@ -95,6 +110,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 50vh;
 }
 
 #about .container h3 {
@@ -396,4 +412,38 @@ tbody tr:hover {
 
 .btn-primary:hover {
   background-color: #0056b3;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100vh;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }

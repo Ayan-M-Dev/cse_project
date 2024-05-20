@@ -20,20 +20,20 @@
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#services">Services</a>
-          <a href="#contact">Contact Us</a>
+          <a href="#footer">Contact Us</a>
         </div>
       </ul>
     </nav>
 
-    <header>
-      <div class="welcome-text">
+    <header class="welcome" background="bg-picture.jpg">
+      <div class="welcome-text" >
         <h1>Welcome to iEducate</h1>
         <p>Empowering learners worldwide with quality online education.</p>
       </div>
-      <div class="rightnav">
+      <!-- <div class="rightnav">
         <input type="text" name="search" id="search" placeholder="Search.." />
         <button class="btn btn-sm">Search</button>
-      </div>
+      </div> -->
     </header>
 
     <section id="about">
@@ -77,10 +77,9 @@
       <div class="container">
         <h2>Our Services</h2>
         <p>
-          Discover the range of services we offer to empower your learning
-          journey.
+          Discover the range of services we offer to empower your learning journey.
         </p>
-
+    
         <div class="service-list">
           <input type="checkbox" name="" id="collapsible-head-one" />
           <label class="service-list-item" for="collapsible-head-one">
@@ -90,7 +89,7 @@
               courses.
             </p>
             <div class="courses">
-              <div class="courses-div">
+              <div class="courses-div" onclick="openModal('one')">
                 <div class="icon">
                   <img src="Assets/html.png" alt="" />
                 </div>
@@ -99,17 +98,16 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
                 </p>
               </div>
-              <div class="courses-div">
+              <div class="courses-div" onclick="openModal('two')">
                 <div class="icon">
                   <img src="Assets/python.png" alt="" />
                 </div>
-
                 <h2>Python</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
                 </p>
               </div>
-              <div class="courses-div">
+              <div class="courses-div" onclick="openModal('three')">
                 <div class="icon">
                   <img src="Assets/java.png" alt="" />
                 </div>
@@ -147,6 +145,13 @@
         </div>
       </div>
     </section>
+
+    <div id="videoModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <iframe id="modalVideo" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
 
     <section id="footer">
       <div class="text-container">
@@ -228,5 +233,29 @@
         <p>&copy; 2024 iEducate. All rights reserved.</p>
       </div>
     </footer>
+
+    <script>
+      function openModal(videoId) {
+        var modal = document.getElementById('videoModal');
+        var video = document.getElementById('modalVideo');
+        video.src = "https://www.youtube.com/embed/BsDoLVMnmZs?si=QaA5DBDaW5WYpgDD" + videoId;
+        modal.style.display = "block";
+      }
+    
+      function closeModal() {
+        var modal = document.getElementById('videoModal');
+        var video = document.getElementById('modalVideo');
+        video.src = "";
+        modal.style.display = "none";
+      }
+    
+      // Close the modal if the user clicks outside of it
+      window.onclick = function(event) {
+        var modal = document.getElementById('videoModal');
+        if (event.target == modal) {
+          closeModal();
+        }
+      }
+    </script>
   </body>
 </html>
